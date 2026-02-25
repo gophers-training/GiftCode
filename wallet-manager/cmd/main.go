@@ -4,6 +4,7 @@ import (
 	"sync"
 	"wallet-manager/config"
 	apisvc "wallet-manager/internal/api"
+	inmemory "wallet-manager/internal/repository/memory"
 )
 
 func main() {
@@ -11,6 +12,9 @@ func main() {
 
 	// Load configuration
 	config.LoadConfig()
+
+	// Load init wallets data
+	inmemory.Init()
 
 	// Start API server
 	appWG.Add(1)
