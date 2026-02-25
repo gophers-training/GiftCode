@@ -6,4 +6,4 @@ api:
     allowedOrigins: "*"
     allowedMethods: "*"
     allowedHeaders: "*"
-    allowCredentials: true
+    allowCredentials: false
