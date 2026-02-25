@@ -13,3 +13,7 @@ windows: build_directory
 	GOOS=windows GOARCH=amd64 go build -o $(BUILD_DIRECTORY)/wallet-manager-windows-amd64.exe cmd/main.go
 
 all: linux darwin windows
+
+api-doc:
+# 	swag init -g cmd/main.go -o internal/api/docs
+	~/Documents/go_projects/bin/swag init -g cmd/main.go

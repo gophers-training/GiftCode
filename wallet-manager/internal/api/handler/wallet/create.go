@@ -7,6 +7,16 @@ import (
 	"github.com/gofiber/fiber/v3"
 )
 
+// @Summary Create a new wallet
+// @Description Create a new wallet with the provided details
+// @Tags Wallet
+// @Accept json
+// @Produce json
+// @Param wallet body model.CreateWalletRequest true "Wallet Creation Request"
+// @Success 201 {object} model.ResponseWithData{data=model.Wallet} "Wallet created successfully"
+// @Failure 400 {object} model.FailureResponse "Invalid request payload"
+// @Failure 500 {object} model.FailureResponse "Failed to create wallet"
+// @Router /wallet [post]
 func Create(c fiber.Ctx) error {
 	createRequest := model.CreateWalletRequest{}
 	if err := c.Bind().JSON(&createRequest); err != nil {

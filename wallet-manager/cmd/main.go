@@ -1,3 +1,13 @@
+// @title Wallet Manager API
+// @version 1.0
+// @description This is the API documentation for the Wallet Manager service.
+// @termsOfService http://swagger.io/terms/
+// @contact.name API Support
+// @contact.email support@example.com
+// @license.name MIT
+// @license.url https://opensource.org/licenses/MIT
+// @host http://127.0.0.1:8080
+// @BasePath /
 package main
 
 import (

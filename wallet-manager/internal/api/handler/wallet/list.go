@@ -7,6 +7,14 @@ import (
 	"github.com/gofiber/fiber/v3"
 )
 
+// @Summary Get list of all wallets
+// @Description Retrieve a list of all wallets
+// @Tags Wallet
+// @Accept json
+// @Produce json
+// @Success 200 {object} model.ResponseWithData{data=[]model.Wallet} "Wallet list retrieved successfully"
+// @Failure 500 {object} model.FailureResponse "Failed to retrieve wallet list"
+// @Router /wallet [get]
 func List(c fiber.Ctx) error {
 	walletList, err := walletsvc.List()
 	if err != nil {
