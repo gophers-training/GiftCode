@@ -1,9 +1,9 @@
-package handler
+package wallethandler
 
 import (
 	"github.com/gofiber/fiber/v3"
 )
 
-func CreateWallet(c fiber.Ctx) error {
+func Create(c fiber.Ctx) error {
 	return nil
 }

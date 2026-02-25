@@ -4,7 +4,7 @@ import (
 	"strings"
 	"sync"
 	"wallet-manager/config"
-	"wallet-manager/internal/api/handler"
+	wallethandler "wallet-manager/internal/api/handler/wallet"
 
 	"github.com/gofiber/fiber/v3"
 	"github.com/gofiber/fiber/v3/middleware/cors"
@@ -38,13 +38,13 @@ func SetCorsConfig(api *fiber.App) {
 
 func SetAPIRoutes(api *fiber.App) {
 	// Get Wallet List
-	api.Get("/wallet", handler.ListWallet)
+	api.Get("/wallet", wallethandler.List)
 	// Get Wallet Detail
-	api.Get("/wallet/:id", handler.GetWalletDetail)
+	api.Get("/wallet/:id", wallethandler.GetDetail)
 	// Create Wallet
-	api.Post("/wallet", handler.CreateWallet)
+	api.Post("/wallet", wallethandler.Create)
 	// Update Wallet
-	api.Put("/wallet/:id", handler.UpdateWallet)
+	api.Put("/wallet/:id", wallethandler.Update)
 	// Delete Wallet
-	api.Delete("/wallet/:id", handler.DeleteWallet)
+	api.Delete("/wallet/:id", wallethandler.Delete)
 }
