@@ -4,7 +4,7 @@ import (
 	"sync"
 	"wallet-manager/config"
 
-	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v3"
 )
 
 func StartAPIServer(wg *sync.WaitGroup) {
